@@ -1,0 +1,15 @@
+.buttonStyle {
+    background: rgb(255, 174, 0);
+    padding: 14px 30px;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    font-size: 2em;
+    margin: 10px;
+    display: center;
+    border: 1px solid black;
+    display: flex;
+  
+  -webkit-align-content: center;
+  align-content: center;
+}
