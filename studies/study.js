@@ -18,6 +18,7 @@
 // walk()
 
 //===================================
+// //filter
 
 // const square = function(number){
 //     return number * number;
@@ -63,8 +64,8 @@
 // // const street = address.street;
 // // const city = address.city;
 // // const country = address.country;
-// // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-// const {street: st, city: ct, country: ctr } = address;
+// // vvvvvvvvvv de vez usar o de cima, usar esse: vvvvvvvvvvvvvv
+// const {street: st, city: ct, country: ctr } = address; //muda a variavel de street para st
 
 // console.log(st)
 
@@ -163,10 +164,10 @@
 //     { id: 3, preco: 25, qtd: 2},
 
 // ]
-// //map(item => item.preco *item.qtd). //cria um vetor com [6,10]
+// //map(item => item.preco *item.qtd). //cria um vetor com [6,10,50]
 // const total = carrinho
 // .map(item => item.preco *item.qtd)
-// .reduce((soma, subtotal) => subtotal + soma, 0)
+// .reduce((soma, subtotal) => subtotal + soma, 0)//soma tudo do vetor
 
 // console.log(total)
 
@@ -178,9 +179,9 @@
 //     { id: 3, preco: 25, qtd: 2, estoque: 5},
 
 // ]
-// //map(item => item.preco *item.qtd). //cria um vetor com [6,10]
-// const subtotal = item => item.preco *item.qtd
-// const filtroEmEstoque = item => item.estoque >= item.qtd
+// //map(item => item.preco *item.qtd). 
+// const subtotal = item => item.preco *item.qtd //map: cria um vetor com [6,10,50]
+// const filtroEmEstoque = item => item.estoque >= item.qtd //filtra o que esta sem estoque
 // const soma = (soma, subtotal) => subtotal + soma
 // const total = carrinho
 //                 .filter(filtroEmEstoque)
@@ -194,14 +195,14 @@
 
 //=====================COMPOSE=================
 
-const func1 = (p1,p2) => console.log("func1", p1,p2)
-const func2 = (p1,p2) => console.log("func2", p1,p2)
+// const func1 = (p1,p2) => console.log("func1", p1,p2)
+// const func2 = (p1,p2) => console.log("func2", p1,p2)
 
-const compose = (...funcoes) => (...argumentos) => {
-    funcoes.forEach(funcoes => funcoes(...argumentos))
+// const compose = (...funcoes) => (...argumentos) => {
+//     funcoes.forEach(funcoes => funcoes(...argumentos))
     
-}
-const func3 = compose(func1, func2)
+// }
+// const func3 = compose(func1, func2)
 
-func3('Andre', 'Baroni')
+// func3('Andre', 'Baroni')
 
