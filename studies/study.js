@@ -124,5 +124,84 @@
 
 // const teacher = new Teacher("Mosh", "CC")
 
-//=======================================
+//=================MAP==================
+
+// const vetor = [
+//     {
+//         id:1,
+//         nome: 'bicicleta',
+//         categoria: 'veiculos'
+//     },
+//     {
+//         id:2,
+//         nome: 'carro',
+//         categoria: 'veiculos'
+//     }
+// ]
+
+// // vetor.map((item) => {
+// //     console.log(item)
+// //     return item
+// // })
+
+// const nomes = vetor.map(item => item.nome) //retorna um vetor so com nomes
+
+// console.log("Nomes:", nomes)
+
+// // const junto = [...vetor, ...nomes]
+// // console.log(junto)
+
+// const categorias = vetor.map(item => `Categoria: ${item.categoria}`)
+
+// console.log("Categorias:", categorias)
+
+//================REDUCE================
+
+// const carrinho = [
+//     { id: 1, preco: 2, qtd: 3},
+//     { id: 2, preco: 10, qtd: 1},
+//     { id: 3, preco: 25, qtd: 2},
+
+// ]
+// //map(item => item.preco *item.qtd). //cria um vetor com [6,10]
+// const total = carrinho
+// .map(item => item.preco *item.qtd)
+// .reduce((soma, subtotal) => subtotal + soma, 0)
+
+// console.log(total)
+
+//==================FILTER=================
+
+// const carrinho = [
+//     { id: 1, preco: 2, qtd: 3, estoque: 10},
+//     { id: 2, preco: 10, qtd: 1, estoque: 0},
+//     { id: 3, preco: 25, qtd: 2, estoque: 5},
+
+// ]
+// //map(item => item.preco *item.qtd). //cria um vetor com [6,10]
+// const subtotal = item => item.preco *item.qtd
+// const filtroEmEstoque = item => item.estoque >= item.qtd
+// const soma = (soma, subtotal) => subtotal + soma
+// const total = carrinho
+//                 .filter(filtroEmEstoque)
+//                 .map(subtotal)
+//                 .reduce(soma, 0)
+
+
+// console.log(total)
+// // const semEstoque = carrinho.filter(item => item.estoque < item.qtd)
+// // console.log(semEstoque)
+
+//=====================COMPOSE=================
+
+const func1 = (p1,p2) => console.log("func1", p1,p2)
+const func2 = (p1,p2) => console.log("func2", p1,p2)
+
+const compose = (...funcoes) => (...argumentos) => {
+    funcoes.forEach(funcoes => funcoes(...argumentos))
+    
+}
+const func3 = compose(func1, func2)
+
+func3('Andre', 'Baroni')
 
