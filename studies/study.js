@@ -64,7 +64,7 @@
 // // const street = address.street;
 // // const city = address.city;
 // // const country = address.country;
-// // vvvvvvvvvv de vez usar o de cima, usar esse: vvvvvvvvvvvvvv
+// // de vez usar o de cima, usar esse: 
 // const {street: st, city: ct, country: ctr } = address; //muda a variavel de street para st
 
 // console.log(st)
