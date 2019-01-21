@@ -1,7 +1,7 @@
 const catalogo = [
     {id: 1,
         nome: "240sx",
-        preco: 22500,
+        preco: 22500 + '$',
         hp: 140,
         motor: "KA24DE",
         turbo: false,
@@ -29,7 +29,8 @@ const catalogo = [
 const cor = catalogo.map(item => item.cor) //retorna só as cores
 console.log(cor)
 
-
+const price = catalogo.map(item => item.preco) //retorna só as cores
+console.log(price)
 
 
 
